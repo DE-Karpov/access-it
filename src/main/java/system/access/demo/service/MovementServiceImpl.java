@@ -41,9 +41,9 @@ public class MovementServiceImpl implements MovementService {
             movement.setRoomId(0);
             repository.save(movement);
             LOGGER.info("You have exited from the room");
-            return ResponseEntity.ok("Saved");
+            return ResponseEntity.ok().build();
         } else {
-            LOGGER.error("You are not able to exit the room");
+            LOGGER.error("You are not able to make a movement");
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
     }

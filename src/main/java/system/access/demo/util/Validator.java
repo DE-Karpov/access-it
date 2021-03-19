@@ -44,7 +44,7 @@ public class Validator {
             LOGGER.error("Either roomId: [{}] or keyId: [{}] is not a number", requestParams.get("roomId"), requestParams.get("keyId"));
             return false;
         } catch (InvalidParameterException e) {
-            LOGGER.error("Entrance parameter is not boolean: [{}]", requestParams.get("entrance"));
+            LOGGER.error("Entrance parameter is not a boolean type: [{}]", requestParams.get("entrance"));
             return false;
         }
     }
